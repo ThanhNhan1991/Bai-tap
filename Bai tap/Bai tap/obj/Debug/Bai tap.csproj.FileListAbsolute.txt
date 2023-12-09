@@ -1,0 +1,7 @@
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\bin\Debug\Bai tap.exe.config
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\bin\Debug\Bai tap.exe
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\bin\Debug\Bai tap.pdb
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\obj\Debug\Bai tap.csproj.AssemblyReference.cache
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\obj\Debug\Bai tap.csproj.CoreCompileInputs.cache
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\obj\Debug\Bai tap.exe
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\Bai tap\obj\Debug\Bai tap.pdb
