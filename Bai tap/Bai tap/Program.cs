@@ -37,8 +37,8 @@ namespace Bai_tap
             {
                 Console.WriteLine("So {0} khong hop le.", n);
             }
-           //Bài 3: Nhập vào số nguyên dương từ n từ bàn phím, tính tổng giai thừa từ 1 đến n
-           //và hiển thị kết quả ra màn hình
+            //Bài 3: Nhập vào số nguyên dương từ n từ bàn phím, tính tổng giai thừa từ 1 đến n
+            //và hiển thị kết quả ra màn hình
             if (n > 0)
             {
                 int sum = 1;
@@ -56,20 +56,20 @@ namespace Bai_tap
             if (n != 0)
             {
                 double can = Math.Sqrt(n);
-                if (can*can == n)
+                if (can * can == n)
                 {
-                    Console.WriteLine("So {0} la so chinh phuong",n);
+                    Console.WriteLine("So {0} la so chinh phuong", n);
                 }
                 else
                 {
-                    Console.WriteLine("So {0} khong phai so chinh phuong",n);
+                    Console.WriteLine("So {0} khong phai so chinh phuong", n);
                 }
             }
             //Bài 5: Viết chương trình nhập vào tháng bất kỳ từ bàn phím, hiển thị số ngày
             //có trong tháng ra màn hình.
             Console.WriteLine("Vui long nhap nam can tra cuu: ");
             int nam = int.Parse(Console.ReadLine());
-            Console.WriteLine("Vui long nhap nam can tra cuu: ");
+            Console.WriteLine("Vui long nhap thang can tra cuu: ");
             int thang = int.Parse(Console.ReadLine());
             switch (thang)
             {
@@ -90,13 +90,37 @@ namespace Bai_tap
                     Console.WriteLine("Thang {0} có 30 ngày", thang);
                     break;
                 default:
-                    Console.WriteLine("Thang {0} có 31 ngày",thang);
+                    Console.WriteLine("Thang {0} có 31 ngày", thang);
                     break;
             }
+            //Bài 6: Viết chương trình nhập vào số nguyên n, tính tổng S theo công thức sau
+            //và hiển thị kết quả ra màn hình. 𝑆 = 1 + 2^2 + 3^3 + 4^4 + ⋯ + 𝑛^𝑛
 
-            Console.ReadLine();
-
+            double S = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                S += Math.Pow(i, i);
             }
+            Console.WriteLine("Tong S = 1 + 2^2 + 3^3 + 4^4 + ⋯ + {0}^{0} la: {1}", n, S);
 
+            //Bài 7: Viết chương trình nhập vào số nguyên n, tính tổng các số lẽ từ 1 đến n
+            //và hiển thị kết quả ra màn hình.
+            int tong = 0;
+
+            for (int i = 1; i <= n; i += 2)
+            {
+                tong += i;
+            }
+            Console.WriteLine("Tong cac so le tu 1 den {0} la: {1}", n, tong);
+            //Bài 8: Nhập vào số nguyên dương n, hiển thị ra màn hình các số nguyên tố từ 1 đến n.
+            for (int i = 2; i <= n; i++)
+            {
+                if (IsPrime(i))
+                {
+                    Console.Write($"{i} ");
+                }
+                Console.ReadLine();
+            }
         }
     }
+}
