@@ -79,7 +79,7 @@ namespace Bai_tap
             {
                 S += Math.Pow(i, i);
             }
-            Console.WriteLine("Tong S = 1 + 2^2 + 3^3 + 4^4 + ⋯ + {0}^{0} la: {1}", n, S);
+            Console.WriteLine("Tong S = 1 + 2^2 + ⋯ + {0}^{0} la: {1}", n, S);
 
             //Bài 7: Viết chương trình nhập vào số nguyên n, tính tổng các số lẽ từ 1 đến n
             //và hiển thị kết quả ra màn hình.
@@ -127,13 +127,20 @@ namespace Bai_tap
             //Bài 9: Viết chương trình nhập vào số hàng n, vẽ tam giác * với số hàng tương ứng.
             Console.WriteLine("Bai 9:_______________________________________");
             Console.WriteLine($"Tam giac deu co {n} canh:");
-            for (int i = 1; i <= n; i++)
+            if (n > 0)
             {
-                for (int k = 1; k <=i; k++)
+                for (int i = 1; i <= n; i++)
                 {
-                    Console.Write("*");
+                    for (int k = 1; k <= i; k++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Vui long nhap mot so nguyen duong lon hon 0");
             }
             //Bài 10: Nhập vào số nguyên dương n, tính toán và hiển thị dãy Fibonacci ra màn hình
             Console.WriteLine("Bai 10:_______________________________________");
