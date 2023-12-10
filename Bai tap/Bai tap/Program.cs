@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -113,14 +114,74 @@ namespace Bai_tap
             }
             Console.WriteLine("Tong cac so le tu 1 den {0} la: {1}", n, tong);
             //Bài 8: Nhập vào số nguyên dương n, hiển thị ra màn hình các số nguyên tố từ 1 đến n.
-            for (int i = 2; i <= n; i++)
+            if (n >= 1)
             {
-                if (IsPrime(i))
+                Console.Write($"Cac so nguyen to tu 1 den {n} la: ");
+
+                // Hiển thị các số nguyên tố từ 1 đến n
+                for (int i = 2; i <= n; i++)
                 {
-                    Console.Write($"{i} ");
+                    bool SNT = true;
+
+                    for (int j = 2; j <= Math.Sqrt(i); j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            SNT = false;
+                            break;
+                        }
+                    }
+
+                    if (SNT)
+                    {
+                        Console.Write($"{i} ");
+                    }
                 }
-                Console.ReadLine();
+                Console.WriteLine();
             }
+            
+            else
+            {
+                Console.WriteLine("Vui long nhap lai so khac");
+            }
+
+            //Bài 9: Viết chương trình nhập vào số hàng n, vẽ tam giác * với số hàng tương ứng.
+            Console.WriteLine($"Tam giac deu co {n} canh:");
+            for (int i = 1; i <= n; i++)
+            {
+                for (int k = 1; k <=i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            //Bài 10: Nhập vào số nguyên dương n, tính toán và hiển thị dãy Fibonacci ra màn hình
+            Console.WriteLine($"Day Fibonacci tu 1 den {n}:") ;
+            if (n >= 0)
+            {
+                int Num1 = 0;
+                int Num2 = 1;
+
+                Console.Write($"{Num1} {Num2} ");
+
+                for (int i = 2; i <= n; i++)
+                {
+                    int nextNum = Num1 + Num2;
+                    Console.Write($"{nextNum} ");
+
+                    Num1 = Num2;
+                    Num2 = nextNum;
+                }
+
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Vui long nhap mot so nguyen duong.");
+            }
+            Console.ReadLine();
+            
         }
     }
 }
+
