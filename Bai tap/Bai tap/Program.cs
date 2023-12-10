@@ -16,6 +16,7 @@ namespace Bai_tap
             int n = int.Parse(Console.ReadLine());
             //Bài 1: Viết chương trình nhập vào số nguyên và kiểm tra xem số đó có chia hết
             //cho 3 hay không.Hiển thị kết quả ra màn hình.
+            Console.WriteLine("Bai 1:_______________________________________");
             if (n % 3 == 0)
             {
                 Console.WriteLine("So {0} chia het cho 3", n);
@@ -25,6 +26,7 @@ namespace Bai_tap
                 Console.WriteLine("So {0} khong chia het cho 3", n);
             }
             //Bài 2: Nhập vào số nguyên dương n, hiển thị bảng cửu chương từ 1 đến n ra màn hình.
+            Console.WriteLine("Bai 2:_______________________________________");
             if (n > 0)
             {
                 Console.WriteLine("Bang cuu chuong tu 1 den {0} la:", n);
@@ -36,10 +38,11 @@ namespace Bai_tap
             }
             else
             {
-                Console.WriteLine("So {0} khong hop le.", n);
+                Console.WriteLine("Vui long nhap so nguyen duong");
             }
             //Bài 3: Nhập vào số nguyên dương từ n từ bàn phím, tính tổng giai thừa từ 1 đến n
             //và hiển thị kết quả ra màn hình
+            Console.WriteLine("Bai 3:_______________________________________");
             if (n > 0)
             {
                 int sum = 1;
@@ -50,11 +53,12 @@ namespace Bai_tap
             }
             else
             {
-                Console.WriteLine("So {0} khong hop le.", n);
+                Console.WriteLine("Vui long nhap so nguyen duong");
             }
             //Bài 4: Viết chương trình nhập vào số nguyên từ bàn phím, kiểm tra xem số đó có phải
             //là số chính phương hay không.Hiển thị kết quả đạt được ra màn hình.
-            if (n != 0)
+            Console.WriteLine("Bai 4:_______________________________________");
+            if (n>= 0)
             {
                 double can = Math.Sqrt(n);
                 if (can * can == n)
@@ -66,37 +70,10 @@ namespace Bai_tap
                     Console.WriteLine("So {0} khong phai so chinh phuong", n);
                 }
             }
-            //Bài 5: Viết chương trình nhập vào tháng bất kỳ từ bàn phím, hiển thị số ngày
-            //có trong tháng ra màn hình.
-            Console.WriteLine("Vui long nhap nam can tra cuu: ");
-            int nam = int.Parse(Console.ReadLine());
-            Console.WriteLine("Vui long nhap thang can tra cuu: ");
-            int thang = int.Parse(Console.ReadLine());
-            switch (thang)
-            {
-                case 2:
-                    if (DateTime.IsLeapYear(nam))
-                    {
-                        Console.WriteLine("Thang 2 có 29 ngày");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Thang 2 có 28 ngày");
-                    }
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    Console.WriteLine("Thang {0} có 30 ngày", thang);
-                    break;
-                default:
-                    Console.WriteLine("Thang {0} có 31 ngày", thang);
-                    break;
-            }
+
             //Bài 6: Viết chương trình nhập vào số nguyên n, tính tổng S theo công thức sau
             //và hiển thị kết quả ra màn hình. 𝑆 = 1 + 2^2 + 3^3 + 4^4 + ⋯ + 𝑛^𝑛
-
+            Console.WriteLine("Bai 6:_______________________________________");
             double S = 0;
             for (int i = 1; i <= n; i++)
             {
@@ -106,6 +83,7 @@ namespace Bai_tap
 
             //Bài 7: Viết chương trình nhập vào số nguyên n, tính tổng các số lẽ từ 1 đến n
             //và hiển thị kết quả ra màn hình.
+            Console.WriteLine("Bai 7:_______________________________________");
             int tong = 0;
 
             for (int i = 1; i <= n; i += 2)
@@ -114,6 +92,7 @@ namespace Bai_tap
             }
             Console.WriteLine("Tong cac so le tu 1 den {0} la: {1}", n, tong);
             //Bài 8: Nhập vào số nguyên dương n, hiển thị ra màn hình các số nguyên tố từ 1 đến n.
+            Console.WriteLine("Bai 8:_______________________________________");
             if (n >= 1)
             {
                 Console.Write($"Cac so nguyen to tu 1 den {n} la: ");
@@ -146,6 +125,7 @@ namespace Bai_tap
             }
 
             //Bài 9: Viết chương trình nhập vào số hàng n, vẽ tam giác * với số hàng tương ứng.
+            Console.WriteLine("Bai 9:_______________________________________");
             Console.WriteLine($"Tam giac deu co {n} canh:");
             for (int i = 1; i <= n; i++)
             {
@@ -156,7 +136,8 @@ namespace Bai_tap
                 Console.WriteLine();
             }
             //Bài 10: Nhập vào số nguyên dương n, tính toán và hiển thị dãy Fibonacci ra màn hình
-            Console.WriteLine($"Day Fibonacci tu 1 den {n}:") ;
+            Console.WriteLine("Bai 10:_______________________________________");
+            Console.Write($"Day Fibonacci tu 1 den {n} la: ") ;
             if (n >= 0)
             {
                 int Num1 = 0;
@@ -178,6 +159,42 @@ namespace Bai_tap
             else
             {
                 Console.WriteLine("Vui long nhap mot so nguyen duong.");
+            }
+            //Bài 5: Viết chương trình nhập vào tháng bất kỳ từ bàn phím, hiển thị số ngày
+            //có trong tháng ra màn hình.
+            Console.WriteLine("Bai 5:_______________________________________");
+            Console.WriteLine("Vui long nhap nam can tra cuu: ");
+            int nam = int.Parse(Console.ReadLine());
+            Console.WriteLine("Vui long nhap thang can tra cuu: ");
+            int thang = int.Parse(Console.ReadLine());
+            if (thang <= 12)
+            {
+                switch (thang)
+                {
+                    case 2:
+                        if (DateTime.IsLeapYear(nam))
+                        {
+                            Console.WriteLine("Thang 2 có 29 ngày");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Thang 2 có 28 ngày");
+                        }
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        Console.WriteLine("Thang {0} có 30 ngày", thang);
+                        break;
+                    default:
+                        Console.WriteLine("Thang {0} có 31 ngày", thang);
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Vui long nhap thang lon hon 0 va nho hon hoac bang 12");
             }
             Console.ReadLine();
             
