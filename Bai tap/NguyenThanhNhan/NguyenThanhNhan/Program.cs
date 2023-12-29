@@ -52,7 +52,7 @@ namespace NguyenThanhNhan
             Console.WriteLine("5. Danh sach cac viec can lam theo do uu tien giam dan");
             Console.WriteLine("6. Hien thi toan bo cong viec da nhap");
             Console.WriteLine("--------------");
-            Console.Write("Moi ban chon bai tap: ");
+            Console.Write("Chon chuc nang can thuc hien: ");
         }
         private static bool DungChuongTrinh()
         {
@@ -107,12 +107,12 @@ namespace NguyenThanhNhan
             HienThiCongViec();
             if (listCV.Count > 0)
             {
-                Console.WriteLine("Chon vi tri cong viec can cap nhat trang thai (nhap so):");
+                Console.WriteLine("Chon cong viec can cap nhat trang thai (nhap so thu tu cong viec):");
                 int viTri = int.Parse(Console.ReadLine()) - 1;
 
                 if (viTri >= 0 && viTri < listCV.Count)
                 {
-                    Console.WriteLine("Nhap trang thai moi (vi du: Hoan thanh, Chua hoan thnh):");
+                    Console.WriteLine("Nhap trang thai moi (vi du: Hoan thanh, Chua hoan thanh):");
                     string trangthaimoi = Console.ReadLine();
 
                     listCV[viTri].TrangThaiCV = trangthaimoi;
@@ -151,13 +151,22 @@ namespace NguyenThanhNhan
         }
         public static void HienThiCongViec()
         {
+            if (listCV.Count == 0)
+            {
+                Console.WriteLine("Danh sach cong viec rong.");
+                return;
+            }
+
+            int index = 1;
             foreach (var item in listCV)
             {
+                Console.WriteLine("Thu tu cong viec: {0}",index);
                 Console.WriteLine("Ten cong viec: {0}", item.TenCV);
                 Console.WriteLine("Do uu tien: {0}", item.DoUuTien);
                 Console.WriteLine("Thong tin cong viec: {0}", item.ThongTinCV);
                 Console.WriteLine("Trang thai: {0}", item.TrangThaiCV);
                 Console.WriteLine();
+                index++;
             }
         }
         static void HienThi(List<CongViec> congViecs)
