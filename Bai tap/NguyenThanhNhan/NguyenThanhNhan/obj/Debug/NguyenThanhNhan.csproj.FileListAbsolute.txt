@@ -1,0 +1,7 @@
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\bin\Debug\NguyenThanhNhan.exe.config
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\bin\Debug\NguyenThanhNhan.exe
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\bin\Debug\NguyenThanhNhan.pdb
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\obj\Debug\NguyenThanhNhan.csproj.AssemblyReference.cache
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\obj\Debug\NguyenThanhNhan.csproj.CoreCompileInputs.cache
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\obj\Debug\NguyenThanhNhan.exe
+D:\c# và oop\Bai tap\Bai-tap\Bai tap\NguyenThanhNhan\NguyenThanhNhan\obj\Debug\NguyenThanhNhan.pdb
